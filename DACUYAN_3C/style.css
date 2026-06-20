@@ -1,0 +1,130 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f1f1f;
+  --accent: #4f46e5;
+  --muted: #6b7280;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Input */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--accent);
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filters button {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #ccc;
+}
+
+.filters button.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: var(--card);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.actions button {
+  margin-left: 5px;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+/* Counter */
+#counter {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Clear button */
+#clearCompleted {
+  width: 100%;
+  margin-top: 10px;
+  background: #ef4444;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
